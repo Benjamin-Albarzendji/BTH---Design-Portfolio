@@ -1,8 +1,35 @@
+// Normalize CSS
+@import '../../node_modules/normalize.css/normalize';
+
+// Modular imports
+@import 'variables';
+@import 'blockquotes';
+@import 'code';
+
+// Font Imports
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
 * {
+    color: $font-color;
     box-sizing: border-box;
     border: 0 none;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 ol,
@@ -24,8 +51,8 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
-    
+    background-color: $background-color;
+
 
 }
 
@@ -36,11 +63,13 @@ body {
     align-items: center;
     text-align: center;
 
+    * {
+        width: 80%;
+    }
+
 }
 
-.main * {
-    width: 80%;
-}
+
 
 .header,
 .footer {
@@ -57,8 +86,8 @@ body {
 }
 
 .header {
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 1px 2px 5px -1px, rgba(0, 0, 0, 0.3) 1px 1px 3px -1px;
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 25px;
@@ -67,12 +96,12 @@ body {
     margin-left: 10%;
     display: flex;
     justify-content: space-between;
-
-    
 }
 
-.header > .nav {
-    align-self: flex-end;
+.header {
+    >.nav {
+        align-self: flex-end;
+    }
 }
 
 /* Title */
@@ -83,7 +112,6 @@ body {
 }
 
 @media (max-width: 767px) {
-
     .title,
     .logo {
         padding: 1em 1em 1em 0;
@@ -98,12 +126,14 @@ body {
     }
 }
 
-.title * {
-    color: #111;
-}
+.title {
+    * {
+        color: #111;
+    }
 
-.title p {
-    font-style: italic;
+    p {
+        font-style: italic;
+    }
 }
 
 /* Footer */
@@ -117,14 +147,15 @@ body {
     gap: 20px;
     border-top: 1px solid #222;
     border-style: dotted;
-}
 
-.footer a {
-    color: #222;
-}
+    a {
+        color: #222;
+    }
 
-.footer .social {
-    font-size: 2rem;
+    .social {
+        font-size: 2rem;
+
+    }
 }
 
 /* Typografy */
@@ -159,48 +190,7 @@ img {
     max-width: 100%;
 }
 
-/* BELOW ARE PREPARED STYLES FOR CODE/PRE/BLOCKQUOTE, FEEL FREE TO REMOVE IT  */
-
-/* Code */
-
-code {
-    margin: 0 0.1em;
-    padding: 0.1em 0.2em;
-    border: 1px solid #ccc;
-    border-radius: 0.3em;
-    background: #f5f5f5;
-    font-family: monospace;
-    font-size: 0.85rem;
-    line-height: 1.9824;
-}
-
-pre {
-    padding: 0 1em;
-    border: 1px solid #ccc;
-    border-radius: 0.3em;
-    background: #f5f5f5;
-}
-
-pre code {
-    display: block;
-    margin: 0;
-    padding: 1.1111em 0;
-    border: 0 none;
-    background: transparent;
-    overflow-x: auto;
-    line-height: 1.4;
-}
-
-/* Blockquote */
-
-blockquote {
-    font-style: italic;
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 0.5em solid #f5f5f5;
-}
-
-.mePic{
+.me-pic {
     border-radius: 15px;
     width: 30%;
     align-self: center;
