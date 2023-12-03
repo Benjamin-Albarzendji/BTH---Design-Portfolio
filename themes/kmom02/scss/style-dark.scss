@@ -2,7 +2,7 @@
 @import '../../node_modules/normalize.css/normalize';
 
 // Modular imports
-@import 'variables';
+@import 'variables-dark';
 @import 'blockquotes';
 @import 'code';
 @import "technology";
@@ -70,6 +70,19 @@ body {
 
 }
 
+.colorBoxes{
+    display: flex;
+    font-weight: bold;
+    justify-content: end;
+
+    align-items: center;
+
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+
 
 
 .header,
@@ -116,16 +129,6 @@ body {
 .logo {
     padding: 3em 3em 3em 0;
 }
-
-.colorBoxes{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-
-}
-
 
 @media (max-width: 767px) {
     .title,

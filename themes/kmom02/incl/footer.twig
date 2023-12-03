@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" >
     <div>
         <p>
             <a href="https://github.com/Benjamin-Albarzendji/BTH_Design-Portfolio">My github repo!</a>
@@ -10,11 +10,17 @@
         <a href="{{ social.url }}" title="{{ social.title }}" role="button">
             <i class="{{ social.icon }}" aria-hidden="true"></i>
 
-            <span class="sr-only">{{ social.title }}</span>
+            {# <span class="sr-only">{{ social.title }}</span> #}
+            
 
 
-        </a>
+            <div href="{{ social.url }}" title="{{ social.title }}" role="button">
+{{social.title}}
+
+        </div>
         <i class="{{social.jedi}}" style="color: #ff2600;"></i>
+
+
         {% endfor %}
 
     </div>

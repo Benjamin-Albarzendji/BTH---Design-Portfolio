@@ -6556,7 +6556,7 @@ h6 {
 }
 
 * {
-  color: #E3CA24;
+  color: #A2A7B6;
   box-sizing: border-box;
   border: 0 none;
   margin: 0;
@@ -6582,7 +6582,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #426163;
+  background-color: #191F33;
 }
 
 .main {
@@ -6594,6 +6594,16 @@ body {
 }
 .main * {
   width: 80%;
+}
+
+.colorBoxes {
+  display: flex;
+  font-weight: bold;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .header,
@@ -6609,8 +6619,8 @@ body {
 }
 
 .header {
-  color: #06E6F9;
-  background-color: #8E466F;
+  color: #83A0FF;
+  background-color: #464E66;
   box-shadow: rgba(50, 50, 93, 0.25) 1px 2px 5px -1px, rgba(0, 0, 0, 0.3) 1px 1px 3px -1px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -6622,7 +6632,7 @@ body {
   justify-content: space-between;
 }
 .header a {
-  color: #06E6F9;
+  color: #83A0FF;
 }
 
 .header > .nav {
@@ -6633,14 +6643,6 @@ body {
 .title,
 .logo {
   padding: 3em 3em 3em 0;
-}
-
-.colorBoxes {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -6656,11 +6658,11 @@ body {
   }
 }
 .title * {
-  color: #06E6F9;
+  color: #83A0FF;
 }
 .title p {
   font-style: italic;
-  color: #06E6F9;
+  color: #83A0FF;
 }
 
 /* Footer */
