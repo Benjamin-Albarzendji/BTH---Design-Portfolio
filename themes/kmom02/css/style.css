@@ -6587,7 +6587,6 @@ body {
 
 .main {
   flex: 1 0 auto;
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -6653,6 +6652,26 @@ body {
   }
   .logo {
     max-width: 30%;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+  }
+  .grid-item {
+    padding: 20px;
+    width: 100%;
+  }
+  .grid-item picture {
+    width: 400px;
+    height: 200px;
+  }
+  .grid-item picture img {
+    width: 400px;
+    height: 200px;
   }
 }
 .title * {
@@ -6723,4 +6742,33 @@ img {
   width: 30%;
   align-self: center;
   justify-self: center;
+}
+
+@media (min-width: 767px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 768px;
+    justify-content: center;
+    align-content: center;
+  }
+  .embed {
+    margin-top: 50px;
+    width: 1000px;
+    height: 500px;
+  }
+}
+.grid-item {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+}
+.grid-item picture {
+  width: 200px;
+  height: 200px;
+}
+.grid-item img {
+  width: 200px;
+  height: 200px;
 }

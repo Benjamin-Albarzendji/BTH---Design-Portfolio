@@ -3,28 +3,28 @@
         {% if pages["_meta"].meta.logo %}
         <div class="logo">
             <a href="{{ base_url }}">
-                <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="" />
+                <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt=" Watermelon" />
             </a>
         </div>
         {% endif %}
-        <div class="title" {{ pages["_meta"].meta.tagline ? ' class="tagline"' }}>
-            <a href="{{ base_url }}">
-                <h1>{{ site_title }}</h1>
-                {{ pages["_meta"].meta.tagline|markdown }}
+        <div style="color:white" class="title" {{ pages["_meta"].meta.tagline ? ' class="tagline"' }}>
+            <a style="color:white" href="{{ base_url }}">
+                <h1 style="color:white">{{ site_title }}</h1>
+               <h1 style="color:white !important"> {{ pages["_meta"].meta.tagline|markdown }} </h1>
             </a>
         </div>
-        <a class="nav-toggle" id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false"
-            tabindex="1">
-            <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
-            <span class="sr-only">Toggle Menu</span>
+        <a style="color:white" tyle="color:white" class="nav-toggle" id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false"
+            tabindex="0">
+            <i style="color:white" class="fa fa-bars" aria-hidden="true" id="toggler"></i>
+            <span style="color:white" class="sr-only">Toggle Menu</span>
         </a>
     </div>
-    <div class="nav">
-        <div id="nav" role="navigation" tabindex="-1">
+    <div style="color:white" class="nav">
+        <div style="color:white" id="nav" role="navigation" tabindex="-1">
             <ul>
                 {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
-                    <li{% if page.id==current_page.id %} class="active" {% endif %}>
-                        <a href="{{ page.url }}">{{ page.title }}</a>
+                    <li style="color:white" {% if page.id==current_page.id %} class="active" {% endif %}>
+                        <a style="color:white" href="{{ page.url }}">{{ page.title }}</a>
                     </li>
                 {% endfor %}
             </ul>

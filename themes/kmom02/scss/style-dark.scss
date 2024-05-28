@@ -25,7 +25,7 @@ h6 {
 }
 
 * {
-    color:$font-alternative-color;
+    color: $font-alternative-color;
     box-sizing: border-box;
     border: 0 none;
     margin: 0;
@@ -63,6 +63,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
 
     * {
         width: 80%;
@@ -70,7 +71,82 @@ body {
 
 }
 
-.colorBoxes{
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.content-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $background-alternative-color;
+    border-radius: 15px;
+    padding: 20px;
+
+
+    h1 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        rotate: -45deg;
+
+        // Make the image rotate back and forth
+        animation: rotate 2s linear infinite;
+
+        
+    }
+
+    p:first-of-type {
+        font-style: italic;
+        rotate: 5deg;
+
+    }
+
+    p:last-of-type {
+        display: flex;
+        justify-content: center;
+        rotate: 45deg;
+
+        // Slide in animation from the top
+
+    }
+
+    img {
+        box-shadow: 100px 10px 5px  rgba(0, 0, 0, 0.75);
+
+        animation: slide-in 2s ease-in-out;
+
+        
+
+
+    }
+
+}
+
+.color-boxes {
     display: flex;
     font-weight: bold;
     justify-content: end;
@@ -112,7 +188,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    a{
+    a {
         color: $font-color;
     }
 }
@@ -143,6 +219,37 @@ body {
     .logo {
         max-width: 30%;
     }
+
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .grid-item {
+        padding: 20px;
+        width: 100%;
+
+        picture {
+
+            width: 400px;
+            height: 200px;
+
+            img {
+                width: 400px;
+                height: 200px;
+            }
+        }
+
+    }
+
+
 }
 
 .title {
@@ -169,10 +276,10 @@ body {
     border-top: 1px solid #222;
     border-style: dotted;
 
-    .social{
+    .social {
         display: flex;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
         gap: 20px;
 
     }
@@ -224,4 +331,44 @@ img {
     width: 30%;
     align-self: center;
     justify-self: center;
+}
+
+@media (min-width: 767px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        width: 768px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .embed {
+        margin-top: 50px;
+        width: 1000px;
+        height: 500px;
+
+    }
+
+}
+
+
+.grid-item {
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+
+    picture {
+
+        width: 200px;
+        height: 200px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+
+
 }
